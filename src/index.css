@@ -18,7 +18,7 @@
 body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--bg-dark);
-  background-image: 
+  background-image:
     radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.1) 0px, transparent 50%),
     radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.1) 0px, transparent 50%),
     radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.1) 0px, transparent 50%),
@@ -33,6 +33,10 @@ body {
 
 #root {
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-card {
@@ -44,7 +48,7 @@ body {
   padding: 3rem;
   width: 100%;
   max-width: 480px;
-  box-shadow: 
+  box-shadow:
     0 25px 50px -12px rgba(0, 0, 0, 0.5),
     0 0 0 1px rgba(255, 255, 255, 0.05) inset;
   display: flex;
@@ -61,20 +65,23 @@ body {
   left: -50%;
   width: 200%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.03),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.03),
+      transparent);
   transform: rotate(45deg);
   animation: shine 8s infinite linear;
   pointer-events: none;
 }
 
 @keyframes shine {
-  0% { transform: translateX(-50%) rotate(45deg); }
-  100% { transform: translateX(50%) rotate(45deg); }
+  0% {
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  100% {
+    transform: translateX(50%) rotate(45deg);
+  }
 }
 
 .profile-header {
@@ -203,4 +210,11 @@ body {
 .external-icon {
   opacity: 0.5;
   margin-left: auto;
+}
+
+.app-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
 }
